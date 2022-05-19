@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body>
+    <div id="main">Esta es una etiqueta</div>
+    <button>Carlos</button>
+    <button>Iván</button>
+    <button>Irving</button>
+
+    <div>
+        <button id="limpiarPantalla">Limpiar pantalla</button>
+    </div>
+
+    <hr>
+
+    <div id="nameTitle"></div>
+
+    <script>
+
+        const main = document.getElementById('main');
+        main.innerHTML = '<h1>DOM Manipulation</h1>';
+
+        const nameBtn = document.querySelectorAll('button');
+        const nameTitle = document.querySelector('#nameTitle');
+
+        //Por cada botón, agregar un evento click
+        nameBtn.forEach(btn => {
+            btn.addEventListener('click', () => {
+                nameTitle.innerHTML = btn.innerHTML;
+            });
+        });
+
+        //Limpiamos la pantalla
+        const limpiarPantalla = document.getElementById('limpiarPantalla');
+        limpiarPantalla.addEventListener('click', () => {
+            nameTitle.innerHTML = '';
+        });
+
+        //Damos estilos a los botones con JS
+        nameBtn[0].style.backgroundColor = 'red';
+        nameBtn[1].style.backgroundColor = 'green';
+        nameBtn[2].style.backgroundColor = '#E6E17C';
+
+        //Aplicamos margenes a los botones con JS
+        nameBtn[0].style.margin = '5px';
+        nameBtn[1].style.margin = '5px';
+        nameBtn[2].style.margin = '5px';
+        limpiarPantalla.style.margin = '5px';
+
+        //Aplicamos estilos a los botones con JS
+        nameBtn.forEach(btn => {
+            btn.style.border = '1px solid black';
+            btn.style.padding = '10px';
+            btn.style.width = '100px';
+            btn.style.height = '50px';
+        });
+
+    </script>
+</body>
+</html>
