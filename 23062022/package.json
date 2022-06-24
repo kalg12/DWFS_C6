@@ -1,0 +1,16 @@
+{
+  "name": "23062022",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Kevin Luciano",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^3.2.6",
+    "nodemon": "^2.0.18"
+  }
+}
