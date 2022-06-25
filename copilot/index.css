@@ -1,0 +1,21 @@
+/* crea un grid de 6 columas y 3 filas */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+
+/* Flexbox que todo esté centrado */
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Flexbox que todo esté alineado a la izquierda */
+.flex-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}

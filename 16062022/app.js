@@ -1,8 +1,11 @@
-const API = 'https://jsonplaceholder.typicode.com/users'
+const API = 'https://jsonplaceholder.typicode.com'
+const endPoint = '/users'
 
-const peticion = fetch(API)
+const urlAPI = `${API}${endPoint}`
+
+const peticion = fetch(urlAPI)
 .then(resultado => resultado.json())
 .then(personasDelAPI => {
-    console.log(personasDelAPI)
+    console.log(personasDelAPI[0])
 })
 .catch(error => console.log(error))
